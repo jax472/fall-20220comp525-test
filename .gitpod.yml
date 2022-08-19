@@ -5,7 +5,7 @@ tasks:
   - before: |
       printf 'export PATH="%s:$PATH"\n' "~/.local/bin" >> $HOME/.bashrc && exit
   - init: |
-      pip install pycodestyle
+      pip install pylint
 
 vscode:
   extensions:
