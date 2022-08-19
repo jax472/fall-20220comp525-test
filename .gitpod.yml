@@ -1,1 +1,12 @@
+
 image: python:latest
+
+tasks:
+  - init: |
+      pip install pycodestyle
+  - command: |
+      echo "lets get started!"
+  
+vscode:
+  extensions:
+    - ms-python.python
