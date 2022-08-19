@@ -1,4 +1,3 @@
-
 image: python:latest
 
 tasks:
@@ -6,6 +5,8 @@ tasks:
       printf 'export PATH="%s:$PATH"\n' "~/.local/bin" >> $HOME/.bashrc && exit
   - init: |
       pip install pylint
+  - command: |
+      source ~/.bashrc
 
 vscode:
   extensions:
