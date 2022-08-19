@@ -2,11 +2,11 @@
 image: python:latest
 
 tasks:
+  - before: |
+      printf 'export PATH="%s:$PATH"\n' "~/.local/bin" >> $HOME/.bashrc && exit
   - init: |
       pip install pycodestyle
-  - command: |
-      echo "lets get started!"
-  
+
 vscode:
   extensions:
     - ms-python.python
